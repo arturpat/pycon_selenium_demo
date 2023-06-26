@@ -6,12 +6,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 import selenium.webdriver.support.expected_conditions as ec
 
 
-date_out = "2022-10-25"
-date_in = "2022-10-30"
+date_out = "2023-10-25"
+date_in = "2023-10-30"
 
 
 # Leave comments!
-driver = webdriver.Firefox(executable_path='./geckodriver')
+driver = webdriver.Firefox()  # if needed: driver = webdriver.Firefox(executable_path='./geckodriver')
 driver.get("https://www.ryanair.com/en/en/")  # skyscanner, wizzair
 
 # just a waiter object for use later
