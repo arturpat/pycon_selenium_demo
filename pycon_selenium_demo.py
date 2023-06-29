@@ -16,3 +16,5 @@ driver.get("https://www.ryanair.com/en/en/")  # skyscanner, wizzair
 
 # just a waiter object for use later
 wait = WebDriverWait(driver, 20)
+
+driver.close()  # a breakpoint here will make the execution stop *before* closing Firefox

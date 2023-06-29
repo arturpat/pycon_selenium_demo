@@ -43,4 +43,6 @@ print(f"Outbound price: {price_elements[0].text}")
 print(f"Inbound price: {price_elements[1].text}")
 # as of 26.06.2022: 76.97, 70.07
 
+driver.close()
+
 pass
