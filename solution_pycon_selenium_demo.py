@@ -23,10 +23,10 @@ elem = wait.until(ec.visibility_of_element_located((By.CLASS_NAME, "cookie-popup
 elem.click()
 
 driver.get(f"https://www.ryanair.com/us/en/trip/flights/"
-           f"select?adults=1&teens=0&children=0&infants=0&dateOut=2023-12-03&"
-           f"dateIn=2023-12-10&isConnectedFlight=false&isReturn=true&discount=0&"
+           f"select?adults=1&teens=0&children=0&infants=0&dateOut={date_out}&"
+           f"dateIn={date_in}&isConnectedFlight=false&isReturn=true&discount=0&"
            f"promoCode=&originIata=GDN&destinationIata=NAP&tpAdults=1&tpTeens=0&"
-           f"tpChildren=0&tpInfants=0&tpStartDate=2023-12-03&tpEndDate=2023-12-10&"
+           f"tpChildren=0&tpInfants=0&tpStartDate={date_out}&tpEndDate={date_in}&"
            f"tpDiscount=0&tpPromoCode=&tpOriginIata=GDN&tpDestinationIata=NAP")
 
 # go straight for the price:
@@ -42,6 +42,7 @@ assert len(price_elements) == 2, f"Expected 2 prices, got {[e.text for e in pric
 print(f"Outbound price: {price_elements[0].text}")
 print(f"Inbound price: {price_elements[1].text}")
 # as of 26.06.2022: 76.97, 70.07
+# as of 07.09.2023: 52.36, 63.66
 
 driver.close()
 
